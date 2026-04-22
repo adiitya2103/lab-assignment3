@@ -1,0 +1,220 @@
+/* ===========================
+   StudentRow Component Styles
+   =========================== */
+
+.student-row {
+  transition: background var(--transition);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.student-row:last-child {
+  border-bottom: none;
+}
+
+.student-row:hover {
+  background: var(--bg-hover);
+}
+
+.student-row td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+/* Index cell */
+.cell-index {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  width: 40px;
+  text-align: center;
+}
+
+/* Name cell */
+.cell-name {
+  font-weight: 500;
+}
+
+.name-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--bg-input);
+  border: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  flex-shrink: 0;
+}
+
+/* Score cell */
+.cell-score {
+  min-width: 120px;
+}
+
+.score-display {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.score-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.score-max {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Edit mode */
+.edit-score-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.score-input {
+  width: 70px;
+  padding: 0.4rem 0.6rem;
+  background: var(--bg-input);
+  border: 2px solid var(--accent-blue);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  outline: none;
+  transition: all var(--transition-fast);
+  -moz-appearance: textfield;
+}
+
+.score-input::-webkit-outer-spin-button,
+.score-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.score-input:focus {
+  box-shadow: 0 0 0 3px var(--accent-blue-glow);
+}
+
+.edit-actions {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.btn-save,
+.btn-cancel {
+  padding: 0.35rem 0.6rem;
+  border: none;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.btn-save {
+  background: rgba(0, 230, 118, 0.15);
+  color: var(--pass-color);
+  border: 1px solid var(--pass-border);
+}
+
+.btn-save:hover {
+  background: rgba(0, 230, 118, 0.3);
+  transform: scale(1.1);
+}
+
+.btn-cancel {
+  background: rgba(255, 82, 82, 0.15);
+  color: var(--fail-color);
+  border: 1px solid var(--fail-border);
+}
+
+.btn-cancel:hover {
+  background: rgba(255, 82, 82, 0.3);
+  transform: scale(1.1);
+}
+
+/* Status badge */
+.cell-status {
+  text-align: center;
+}
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.status-pass {
+  background: var(--pass-bg);
+  color: var(--pass-color);
+  border: 1px solid var(--pass-border);
+}
+
+.status-fail {
+  background: var(--fail-bg);
+  color: var(--fail-color);
+  border: 1px solid var(--fail-border);
+}
+
+/* Actions cell */
+.cell-actions {
+  text-align: center;
+  width: 100px;
+}
+
+.btn-edit {
+  padding: 0.4rem 0.8rem;
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-secondary);
+  font-family: var(--font-family);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-edit:hover {
+  background: var(--bg-hover);
+  color: var(--text-primary);
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .student-row td {
+    padding: 0.75rem 0.5rem;
+  }
+
+  .avatar {
+    width: 30px;
+    height: 30px;
+    font-size: 0.75rem;
+  }
+
+  .score-value {
+    font-size: 1rem;
+  }
+}

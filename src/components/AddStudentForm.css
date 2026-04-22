@@ -1,0 +1,74 @@
+.add-form {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.add-form-fields {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.add-input {
+  flex: 1;
+  padding: 0.65rem 0.9rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  outline: none;
+  transition: border-color var(--transition);
+  -moz-appearance: textfield;
+}
+
+.add-input::-webkit-outer-spin-button,
+.add-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.add-input::placeholder {
+  color: var(--text-muted);
+}
+
+.add-input:focus {
+  border-color: var(--accent-primary);
+}
+
+.add-input-score {
+  flex: 0 0 100px;
+}
+
+.add-btn {
+  flex-shrink: 0;
+  padding: 0.65rem 1.25rem;
+  background: var(--accent-primary);
+  border: none;
+  border-radius: var(--radius);
+  color: #fff;
+  font-family: var(--font-family);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity var(--transition);
+}
+
+.add-btn:hover {
+  opacity: 0.85;
+}
+
+.add-error {
+  margin-top: 0.5rem;
+  color: var(--fail-color);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 540px) {
+  .add-form-fields {
+    flex-direction: column;
+  }
+
+  .add-input-score {
+    flex: 1;
+  }
+}
